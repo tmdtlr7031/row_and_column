@@ -12,9 +12,12 @@ class HomeScreen extends StatelessWidget {
         bottom: false, // 바닥은 침범하게 (SafeArea 상세보기해서 수정 가능)
         child: Container(
           color: Colors.black,
+          width: MediaQuery.of(context).size.height, // 앱이 실행되는 기기의 너비
           child: Row(
             // MainAxisAlignment 주축 정렬
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment 반대축 정렬
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 color: Colors.red,
